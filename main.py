@@ -2,21 +2,6 @@ import random
 import time
 import math
 
-class keyboardDisable():
-    def __init__(self):
-      import msvcrt
-      self.on = False
-
-    
-    def start(self):
-        self.on = True
-
-    def stop(self):
-        self.on = False
-
-    def __call__(self): 
-        while self.on:
-          msvcrt.getwch()
 
 
     
@@ -38,10 +23,7 @@ while x != 0:
       print("Ready?")
       text = input() # just press enter when it says Ready?
       time.sleep(random.randint(0,9000)/1000+1)
-      disable = keyboardDisable()
-      disable.start()
       print("Go!")
-      disable.stop()
       time_start = time.time()
       text = input() # just press enter when it says Go!
       time_done = time.time()
